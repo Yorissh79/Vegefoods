@@ -1,0 +1,47 @@
+.main {
+  position: relative;
+  width: 90%;
+
+  img {
+    width:  100%;
+    height: auto;
+  }
+
+  .text {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    background-color: #82ae46;
+    width: 88px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+  .main {
+
+    width: 100%;
+
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .main {
+
+
+
+  }
+
+}

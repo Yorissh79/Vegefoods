@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .top {
+    margin-top: 50px;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+  .main {
+
+    flex-direction: column;
+
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .main {
+
+
+
+  }
+
+}

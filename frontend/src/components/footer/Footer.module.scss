@@ -1,0 +1,31 @@
+.main {
+  padding: 2rem 0;
+
+  p {
+    a {
+      color: green;
+      text-decoration: none;
+    }
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+  .main {
+
+    text-align: center;
+
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .main {
+
+
+
+  }
+
+}

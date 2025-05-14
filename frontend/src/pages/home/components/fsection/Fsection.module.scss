@@ -1,0 +1,82 @@
+.main {
+
+  background-image: url("https://preview.colorlib.com/theme/vegefoods/images/bg_1.jpg");
+  background-position: center;
+  background-size:  cover;
+  background-repeat: no-repeat;
+  padding: 300px 0;
+  display:  flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+
+  .f {
+    font-size: 6vw;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 400;
+    z-index: 1;
+    margin-bottom: 1rem;
+  }
+
+  .s {
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #fff;
+    margin-bottom: 1rem;
+    z-index: 1;
+  }
+
+  button {
+    background-color: #82ae46;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 18px;
+    z-index: 1;
+    cursor: pointer;
+    border: 1px solid #82ae46;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid #82ae46;
+      transition: 0.2s;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    width:  100%;
+    height: 100%;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+  .main {
+
+    .s {
+      text-align: center;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .main {
+
+
+
+  }
+
+}

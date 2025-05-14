@@ -1,6 +1,6 @@
 import express from 'express';
 import {deleteProduct, getProducts, postProduct} from "../controllers/productController.js";
-import {deleteBasket, getBasket, postBasket} from "../controllers/basketController.js";
+import {deleteBasket, getBasket, postBasket, updateBasket} from "../controllers/basketController.js";
 import {deleteWishlist, getWishlist, postWishlist} from "../controllers/wishlistController.js";
 
 const router = express.Router();
@@ -18,5 +18,7 @@ router
     .delete("/products/:id", deleteProduct)
     .delete("/basket/:id", deleteBasket)
     .delete("/wishlist/:id", deleteWishlist)
+
+    .put("/basket/:id", updateBasket)
 
 export default router;

@@ -16,6 +16,11 @@ export const deleteBasketThunk = createAsyncThunk("basket/delete", async (id) =>
     return id;
 })
 
+export const putBasketThunk = createAsyncThunk("basket/put", async (data, id) => {
+    await axios.put(`http://localhost:5000/basket/${id}`, data)
+    return data;
+})
+
 const basketSlice = createSlice({
     name: 'basket',
     initialState: {
@@ -38,6 +43,12 @@ const basketSlice = createSlice({
             .addCase(deleteBasketThunk.fulfilled, (state, action) => {
                 state.loading = false;
                 state.basket = state.basket.filter(basket => basket._id !== action.payload);
+            })
+
+            .addCase(putBasketThunk.fulfilled, (state, action) => {
+                state.loading = false;
+                state.basket.filter(item => item.name !== action.payload);
+                state.basket.push(action.payload);
             })
     }
 })

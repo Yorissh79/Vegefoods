@@ -16,4 +16,6 @@ const deleteProduct = async (req, res) => {
     res.json(req.params.id)
 }
 
+
+
 export { getProducts, postProduct, deleteProduct }

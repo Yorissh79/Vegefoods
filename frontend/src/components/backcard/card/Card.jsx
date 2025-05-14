@@ -1,7 +1,12 @@
 import React, {useEffect} from 'react'
 import style from './Card.module.scss'
 import {useDispatch, useSelector} from "react-redux";
-import {deleteBasketThunk, getBasketThunk, postBasketThunk} from "../../../redux/reducers/basketSlice.js";
+import {
+    deleteBasketThunk,
+    getBasketThunk,
+    postBasketThunk,
+    putBasketThunk
+} from "../../../redux/reducers/basketSlice.js";
 import {deleteProductThunk} from "../../../redux/reducers/productSlice.js";
 import {deleteWishlistThunk, getWishlistThunk, postWishlistThunk} from "../../../redux/reducers/wishlistSlice.js";
 
@@ -42,7 +47,9 @@ const Card = ({item, who}) => {
                     price: item.price,
                     count: "1"
                 }
-                dispatch(postBasketThunk(data))
+                // dispatch(postBasketThunk(data))
+
+                dispatch(putBasketThunk())
             }
             else {
                 const data = {
@@ -52,8 +59,8 @@ const Card = ({item, who}) => {
                     price: item.price,
                     count: String(Number(exist.count) + 1)
                 }
-                dispatch(deleteBasketThunk(exist._id))
-                dispatch(postBasketThunk(data))
+                // dispatch(deleteBasketThunk(exist._id))
+                // dispatch(postBasketThunk(data))
             }
         }
     }

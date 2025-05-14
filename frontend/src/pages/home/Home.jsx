@@ -8,6 +8,7 @@ import Backcard from "../../components/backcard/Backcard.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {getProductThunk} from "../../redux/reducers/productSlice.js";
 import Fosection from "./components/fosection/Fosection.jsx";
+import Fisection from "./components/fisection/Fisection.jsx";
 
 const Home = () => {
 
@@ -26,6 +27,7 @@ const Home = () => {
            <Tsection/>
            <Backcard data={data} who={"home"}/>
            <Fosection/>
+           <Fisection/>
        </div>
     )
 }
